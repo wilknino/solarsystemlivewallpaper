@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy – Solar System Live Wallpaper</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --space: #04070f; --dark: #080d1a; --card: #0d1526; --border: #1a2540;
+    --accent: #4f8ef7; --accent2: #a259f7; --text: #e8edf8; --muted: #7a8aaa;
+    --radius: 16px;
+  }
+  html { scroll-behavior: smooth; }
+  body { background: var(--space); color: var(--text); font-family: 'Inter', sans-serif; line-height: 1.7; overflow-x: hidden; }
+  body::before {
+    content: ''; position: fixed; inset: 0; z-index: 0;
+    background-image:
+      radial-gradient(1px 1px at 10% 20%, #fff 0%, transparent 100%),
+      radial-gradient(1px 1px at 70% 80%, rgba(255,255,255,.8) 0%, transparent 100%),
+      radial-gradient(1px 1px at 85% 35%, rgba(255,255,255,.6) 0%, transparent 100%),
+      radial-gradient(1px 1px at 40% 60%, rgba(255,255,255,.4) 0%, transparent 100%);
+    pointer-events: none;
+  }
+  .container { max-width: 800px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(4,7,15,.85); backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border); padding: 16px 0;
+  }
+  .nav-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+  .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+  .nav-logo span { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1rem; color: var(--text); }
+  .back-link { color: var(--accent); text-decoration: none; font-size: .9rem; display: flex; align-items: center; gap: 6px; }
+  .back-link:hover { text-decoration: underline; }
+
+  .page-header { padding: 64px 0 40px; }
+  .page-header .badge {
+    display: inline-block; background: rgba(79,142,247,.12); border: 1px solid rgba(79,142,247,.3);
+    color: var(--accent); font-size: .78rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+    padding: 4px 12px; border-radius: 50px; margin-bottom: 20px;
+  }
+  .page-header h1 { font-family: 'Space Grotesk', sans-serif; font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 800; margin-bottom: 12px; }
+  .page-header .last-updated { color: var(--muted); font-size: .88rem; }
+
+  .content-card {
+    background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
+    padding: 40px 44px; margin-bottom: 24px;
+  }
+  @media (max-width: 600px) { .content-card { padding: 24px 20px; } }
+
+  .intro-box {
+    background: rgba(74,222,128,.07); border: 1px solid rgba(74,222,128,.25);
+    border-radius: 12px; padding: 20px 24px; margin-bottom: 32px;
+    display: flex; gap: 14px; align-items: flex-start;
+  }
+  .intro-box .icon { font-size: 1.5rem; flex-shrink: 0; }
+  .intro-box p { color: #a7f3d0; font-size: .95rem; line-height: 1.6; }
+  .intro-box strong { color: #6ee7b7; }
+
+  h2 { font-family: 'Space Grotesk', sans-serif; font-size: 1.25rem; font-weight: 700; margin: 32px 0 12px; color: var(--text); padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+  h2:first-of-type { margin-top: 0; }
+  h3 { font-size: 1rem; font-weight: 700; margin: 20px 0 8px; color: var(--text); }
+  p { color: #b0bccc; font-size: .95rem; margin-bottom: 12px; }
+  ul { color: #b0bccc; font-size: .95rem; padding-left: 20px; margin-bottom: 12px; }
+  li { margin-bottom: 6px; }
+  a { color: var(--accent); }
+  strong { color: var(--text); }
+  .highlight-none {
+    background: rgba(79,142,247,.08); border: 1px solid rgba(79,142,247,.2);
+    border-radius: 10px; padding: 16px 20px; margin: 16px 0;
+    font-size: .93rem; color: #b0bccc;
+  }
+  .highlight-none strong { color: var(--accent); }
+  .contact-block {
+    background: rgba(162,89,247,.08); border: 1px solid rgba(162,89,247,.25);
+    border-radius: 12px; padding: 20px 24px; margin-top: 20px;
+  }
+  .contact-block p { color: #c4b5fd; margin-bottom: 6px; }
+  .contact-block a { color: #a78bfa; font-weight: 600; }
+
+  footer { border-top: 1px solid var(--border); padding: 32px 0; margin-top: 48px; position: relative; z-index: 1; }
+  .footer-inner { max-width: 1140px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+  .footer-inner p { color: var(--muted); font-size: .85rem; }
+  .footer-links a { color: var(--muted); text-decoration: none; font-size: .85rem; margin-left: 16px; }
+  .footer-links a:hover { color: var(--text); }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html">
+      <span>🪐</span>
+      <span>Solar System Live Wallpaper</span>
+    </a>
+    <a href="index.html" class="back-link">← Back to Home</a>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="page-header">
+    <div class="badge">📄 Legal</div>
+    <h1>Privacy Policy</h1>
+    <p class="last-updated">Last updated: May 2025 · Effective immediately upon app installation</p>
+  </div>
+
+  <div class="content-card">
+    <div class="intro-box">
+      <div class="icon">🛡️</div>
+      <p><strong>Short version:</strong> Solar System Live Wallpaper collects <strong>absolutely no personal data</strong>. The app runs entirely on your device, requires no account, sends nothing to any server, and never has and never will sell or share your information.</p>
+    </div>
+
+    <h2>1. Who We Are</h2>
+    <p>Solar System Live Wallpaper ("the App", "we", "our", "us") is an Android live wallpaper application developed and published as a paid app on the Google Play Store. For support or privacy inquiries, contact us at <a href="mailto:spreadlov.aid@gmail.com">spreadlov.aid@gmail.com</a>.</p>
+
+    <h2>2. Information We Collect</h2>
+    <div class="highlight-none">
+      <strong>We collect no personal information whatsoever.</strong> The App does not require you to create an account, sign in, provide your name, email address, location, phone number, or any other personal identifier.
+    </div>
+    <p>Specifically, the App does <strong>not</strong> collect, store, transmit, or process:</p>
+    <ul>
+      <li>Personal identifiers (name, email, address, phone number)</li>
+      <li>Device identifiers (IMEI, advertising ID, device serial number)</li>
+      <li>Location data (GPS, IP-based, or otherwise)</li>
+      <li>Usage analytics or telemetry</li>
+      <li>Crash reports sent to external servers</li>
+      <li>Photos, contacts, calendar data, or any other device content</li>
+      <li>Browsing history or app usage patterns</li>
+    </ul>
+
+    <h2>3. How the App Works</h2>
+    <p>All computation in the App — orbital mechanics, planet positions, eclipse calculations, 3D rendering — happens <strong>entirely on your device</strong>. The App:</p>
+    <ul>
+      <li>Requires no internet connection to function</li>
+      <li>Does not make any network requests</li>
+      <li>Stores only your preference settings (simulation speed, display scale, chosen date, etc.) locally on your device using Android SharedPreferences</li>
+      <li>Never sends these preferences or any other data off-device</li>
+    </ul>
+    <p>Your locally stored preferences remain on your device and are deleted when you uninstall the App.</p>
+
+    <h2>4. Android Permissions</h2>
+    <p>The App requests only the permissions necessary to function as an Android Live Wallpaper:</p>
+    <ul>
+      <li><strong>BIND_WALLPAPER</strong> — required by Android for all live wallpaper apps to attach to the home screen</li>
+      <li><strong>SET_WALLPAPER</strong> — allows the in-app "Set Wallpaper" button to work</li>
+    </ul>
+    <p>No permissions related to location, contacts, camera, microphone, storage, or network access are requested.</p>
+
+    <h2>5. Third-Party Services</h2>
+    <p>The App does not integrate with any third-party analytics, advertising, crash reporting, or social media SDKs.</p>
+    <p>The App is <strong>distributed through Google Play</strong>. Google may collect information about your purchase and device in accordance with their own Privacy Policy (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>). We have no control over and receive no data from Google's processes.</p>
+
+    <h2>6. Children's Privacy</h2>
+    <p>The App does not target children under 13 and does not knowingly collect any information from children. Because the App collects no personal information from anyone, it is inherently safe for users of all ages. Parents and guardians can allow children to use the App with confidence.</p>
+
+    <h2>7. Data Security</h2>
+    <p>Because we collect no personal data, there is no personal data to secure or protect on our end. Your locally stored preferences are protected by Android's standard app sandboxing — other apps cannot access them.</p>
+
+    <h2>8. Data Retention</h2>
+    <p>We retain no data on any server because we collect no data. Local preferences stored on your device are retained until you clear the App's data or uninstall it.</p>
+
+    <h2>9. Your Rights</h2>
+    <p>Depending on your jurisdiction, you may have rights under laws such as GDPR (EU), CCPA (California), or similar privacy regulations. Because we collect no personal data, there is no data to access, export, correct, or delete on our side. If you have any privacy-related questions, please contact us at the address below.</p>
+
+    <h2>10. Changes to This Policy</h2>
+    <p>If we ever change this Privacy Policy, the updated version will be posted at this URL with a new "Last updated" date. We encourage you to review this page periodically. Continued use of the App after any changes constitutes your acceptance of the updated policy.</p>
+    <p>We do not anticipate changes to this policy, as our commitment to zero data collection is fundamental to the App's design.</p>
+
+    <h2>11. Contact Us</h2>
+    <p>If you have any questions, concerns, or requests regarding this Privacy Policy or the App's handling of data, please contact us:</p>
+    <div class="contact-block">
+      <p><strong>Solar System Live Wallpaper — Privacy Contact</strong></p>
+      <p>Email: <a href="mailto:spreadlov.aid@gmail.com">spreadlov.aid@gmail.com</a></p>
+      <p style="margin-top:8px;font-size:.88rem;">We aim to respond to all privacy inquiries within 5 business days.</p>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <p>© 2025 Solar System Live Wallpaper. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms &amp; Conditions – Solar System Live Wallpaper</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --space: #04070f; --dark: #080d1a; --card: #0d1526; --border: #1a2540;
+    --accent: #4f8ef7; --accent2: #a259f7; --gold: #f0c040;
+    --text: #e8edf8; --muted: #7a8aaa; --radius: 16px;
+  }
+  html { scroll-behavior: smooth; }
+  body { background: var(--space); color: var(--text); font-family: 'Inter', sans-serif; line-height: 1.7; overflow-x: hidden; }
+  body::before {
+    content: ''; position: fixed; inset: 0; z-index: 0;
+    background-image:
+      radial-gradient(1px 1px at 10% 20%, #fff 0%, transparent 100%),
+      radial-gradient(1px 1px at 70% 80%, rgba(255,255,255,.8) 0%, transparent 100%),
+      radial-gradient(1px 1px at 85% 35%, rgba(255,255,255,.6) 0%, transparent 100%),
+      radial-gradient(1px 1px at 40% 60%, rgba(255,255,255,.4) 0%, transparent 100%);
+    pointer-events: none;
+  }
+  .container { max-width: 800px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(4,7,15,.85); backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border); padding: 16px 0;
+  }
+  .nav-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+  .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+  .nav-logo span { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1rem; color: var(--text); }
+  .back-link { color: var(--accent); text-decoration: none; font-size: .9rem; display: flex; align-items: center; gap: 6px; }
+  .back-link:hover { text-decoration: underline; }
+
+  .page-header { padding: 64px 0 40px; }
+  .page-header .badge {
+    display: inline-block; background: rgba(162,89,247,.12); border: 1px solid rgba(162,89,247,.3);
+    color: #c084fc; font-size: .78rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+    padding: 4px 12px; border-radius: 50px; margin-bottom: 20px;
+  }
+  .page-header h1 { font-family: 'Space Grotesk', sans-serif; font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 800; margin-bottom: 12px; }
+  .page-header .last-updated { color: var(--muted); font-size: .88rem; }
+
+  .content-card {
+    background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
+    padding: 40px 44px; margin-bottom: 24px;
+  }
+  @media (max-width: 600px) { .content-card { padding: 24px 20px; } }
+
+  .intro-box {
+    background: rgba(240,192,64,.07); border: 1px solid rgba(240,192,64,.25);
+    border-radius: 12px; padding: 20px 24px; margin-bottom: 32px;
+    display: flex; gap: 14px; align-items: flex-start;
+  }
+  .intro-box .icon { font-size: 1.5rem; flex-shrink: 0; }
+  .intro-box p { color: #fde68a; font-size: .95rem; line-height: 1.6; }
+
+  h2 { font-family: 'Space Grotesk', sans-serif; font-size: 1.25rem; font-weight: 700; margin: 32px 0 12px; color: var(--text); padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+  h2:first-of-type { margin-top: 0; }
+  h3 { font-size: 1rem; font-weight: 700; margin: 20px 0 8px; color: var(--text); }
+  p { color: #b0bccc; font-size: .95rem; margin-bottom: 12px; }
+  ul, ol { color: #b0bccc; font-size: .95rem; padding-left: 20px; margin-bottom: 12px; }
+  li { margin-bottom: 6px; }
+  a { color: var(--accent); }
+  strong { color: var(--text); }
+  .warning-box {
+    background: rgba(248,113,113,.07); border: 1px solid rgba(248,113,113,.25);
+    border-radius: 10px; padding: 16px 20px; margin: 16px 0;
+    font-size: .93rem; color: #fca5a5;
+  }
+  .contact-block {
+    background: rgba(162,89,247,.08); border: 1px solid rgba(162,89,247,.25);
+    border-radius: 12px; padding: 20px 24px; margin-top: 20px;
+  }
+  .contact-block p { color: #c4b5fd; margin-bottom: 6px; }
+  .contact-block a { color: #a78bfa; font-weight: 600; }
+  .toc {
+    background: rgba(13,21,38,.8); border: 1px solid var(--border);
+    border-radius: 12px; padding: 20px 24px; margin-bottom: 32px;
+  }
+  .toc h3 { color: var(--muted); font-size: .82rem; text-transform: uppercase; letter-spacing: .1em; margin-bottom: 12px; }
+  .toc ol { color: var(--muted); font-size: .88rem; padding-left: 18px; }
+  .toc a { color: var(--muted); text-decoration: none; }
+  .toc a:hover { color: var(--accent); }
+
+  footer { border-top: 1px solid var(--border); padding: 32px 0; margin-top: 48px; position: relative; z-index: 1; }
+  .footer-inner { max-width: 1140px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+  .footer-inner p { color: var(--muted); font-size: .85rem; }
+  .footer-links a { color: var(--muted); text-decoration: none; font-size: .85rem; margin-left: 16px; }
+  .footer-links a:hover { color: var(--text); }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html">
+      <span>🪐</span>
+      <span>Solar System Live Wallpaper</span>
+    </a>
+    <a href="index.html" class="back-link">← Back to Home</a>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="page-header">
+    <div class="badge">📋 Legal</div>
+    <h1>Terms &amp; Conditions</h1>
+    <p class="last-updated">Last updated: May 2025 · These terms apply to all users of the App</p>
+  </div>
+
+  <div class="content-card">
+    <div class="intro-box">
+      <div class="icon">📌</div>
+      <p>Please read these Terms &amp; Conditions carefully before purchasing or using Solar System Live Wallpaper. By downloading, installing, or using the App, you agree to be bound by these terms. If you do not agree, please do not install or use the App.</p>
+    </div>
+
+    <div class="toc">
+      <h3>Contents</h3>
+      <ol>
+        <li><a href="#s1">Acceptance of Terms</a></li>
+        <li><a href="#s2">The App and Licence</a></li>
+        <li><a href="#s3">Purchase and Payment</a></li>
+        <li><a href="#s4">Refund Policy</a></li>
+        <li><a href="#s5">Permitted Use</a></li>
+        <li><a href="#s6">Prohibited Use</a></li>
+        <li><a href="#s7">Intellectual Property</a></li>
+        <li><a href="#s8">Scientific Accuracy Disclaimer</a></li>
+        <li><a href="#s9">Disclaimer of Warranties</a></li>
+        <li><a href="#s10">Limitation of Liability</a></li>
+        <li><a href="#s11">Privacy</a></li>
+        <li><a href="#s12">Updates and Changes</a></li>
+        <li><a href="#s13">Termination</a></li>
+        <li><a href="#s14">Governing Law</a></li>
+        <li><a href="#s15">Contact</a></li>
+      </ol>
+    </div>
+
+    <h2 id="s1">1. Acceptance of Terms</h2>
+    <p>These Terms &amp; Conditions ("Terms") constitute a legally binding agreement between you ("User", "you") and the developer of Solar System Live Wallpaper ("Developer", "we", "us", "our"). By installing, accessing, or using the Solar System Live Wallpaper Android application (the "App"), you confirm that you:</p>
+    <ul>
+      <li>Have read and understood these Terms</li>
+      <li>Are at least 13 years of age (or have parental/guardian consent)</li>
+      <li>Agree to be bound by these Terms in their entirety</li>
+    </ul>
+    <p>If you do not agree to these Terms, you must not install or use the App and should request a refund through Google Play within the available refund window.</p>
+
+    <h2 id="s2">2. The App and Licence</h2>
+    <p>Solar System Live Wallpaper is an Android live wallpaper application that simulates the Solar System in real time using Keplerian orbital mechanics, OpenGL ES 3.0 rendering, and astronomical ephemeris calculations.</p>
+    <p>Upon purchasing the App, we grant you a <strong>limited, non-exclusive, non-transferable, revocable licence</strong> to:</p>
+    <ul>
+      <li>Install and run the App on Android devices that you own or control</li>
+      <li>Use the App for personal, non-commercial purposes</li>
+    </ul>
+    <p>This licence does not transfer any ownership of the App or its intellectual property to you. The App may be installed on multiple devices linked to the same Google Play account as permitted by Google Play's standard policies.</p>
+
+    <h2 id="s3">3. Purchase and Payment</h2>
+    <p>Solar System Live Wallpaper is a <strong>paid application</strong> available for purchase on the Google Play Store at a one-time price of <strong>$10.00 USD</strong> (or the equivalent in your local currency as determined by Google Play).</p>
+    <ul>
+      <li>Payment is processed by Google Play at the time of purchase</li>
+      <li>The purchase is a <strong>one-time fee</strong> — there are no subscription charges, recurring fees, or in-app purchases</li>
+      <li>All future updates to the App are included with your one-time purchase</li>
+      <li>Tax may be added by Google Play depending on your jurisdiction</li>
+    </ul>
+    <p>We do not handle payment directly. All billing is managed by Google LLC in accordance with Google Play's terms of service and payment policies.</p>
+
+    <h2 id="s4">4. Refund Policy</h2>
+    <p>Google Play offers a <strong>48-hour refund window</strong> for paid applications. You may request a full refund within 48 hours of purchase through the Google Play Store without needing to provide a reason.</p>
+    <p>After the 48-hour window, refunds are subject to Google Play's standard refund policy. We encourage users to:</p>
+    <ul>
+      <li>Read the feature descriptions and screenshots carefully before purchasing</li>
+      <li>Contact us at <a href="mailto:spreadlov.aid@gmail.com">spreadlov.aid@gmail.com</a> if you experience a technical issue — we will do our best to resolve it</li>
+    </ul>
+    <p>We have no obligation to provide refunds outside of Google Play's standard policies, but we will consider reasonable requests made in good faith.</p>
+
+    <h2 id="s5">5. Permitted Use</h2>
+    <p>You may use the App to:</p>
+    <ul>
+      <li>Set it as a live wallpaper on your personal Android device(s)</li>
+      <li>Explore the solar system simulation for personal entertainment and education</li>
+      <li>Share screenshots or screen recordings of the App for personal, non-commercial purposes (e.g., sharing with friends, posting on social media) — please credit "Solar System Live Wallpaper" where appropriate</li>
+    </ul>
+
+    <h2 id="s6">6. Prohibited Use</h2>
+    <p>You must <strong>not</strong>:</p>
+    <ul>
+      <li>Decompile, reverse engineer, disassemble, or attempt to derive the source code of the App</li>
+      <li>Modify, adapt, translate, or create derivative works based on the App</li>
+      <li>Copy, reproduce, or redistribute the App or any of its components</li>
+      <li>Sell, resell, sublicense, rent, lease, or transfer the App or your licence to any third party</li>
+      <li>Remove or alter any copyright notices, trademarks, or other proprietary markings within the App</li>
+      <li>Use the App for any commercial purpose without our express written permission</li>
+      <li>Use the App in any manner that violates applicable laws or regulations</li>
+    </ul>
+    <div class="warning-box">
+      Violation of these prohibited uses may result in termination of your licence and, where applicable, legal action.
+    </div>
+
+    <h2 id="s7">7. Intellectual Property</h2>
+    <p>The App and all of its contents — including but not limited to the source code, GLSL shaders, orbital mechanics algorithms, visual assets, design, and documentation — are the exclusive intellectual property of the Developer and are protected by copyright, trade secret, and other applicable intellectual property laws.</p>
+    <p>All rights not expressly granted in these Terms are reserved by the Developer. Nothing in these Terms transfers any intellectual property rights to you.</p>
+
+    <h2 id="s8">8. Scientific Accuracy Disclaimer</h2>
+    <p>The App is designed to provide an <strong>educational and visually engaging</strong> simulation of the Solar System. While we use scientifically grounded methods (Keplerian orbital mechanics, astronomical ephemeris data), the App is not intended to be a professional-grade astronomical tool.</p>
+    <ul>
+      <li>Planet positions are approximated using orbital elements and may differ slightly from values produced by NASA/JPL Horizons or other high-precision tools</li>
+      <li>Visual representations (planet sizes, distances) are artistically scaled for aesthetic appeal and are not to scale with reality</li>
+      <li>Eclipse detection uses simplified geometric models and may not match exact eclipse timings</li>
+    </ul>
+    <p>Do not use this App as the sole basis for scientific research, navigation, astronomical observation planning, or any purpose requiring certified accuracy.</p>
+
+    <h2 id="s9">9. Disclaimer of Warranties</h2>
+    <p>THE APP IS PROVIDED <strong>"AS IS"</strong> AND <strong>"AS AVAILABLE"</strong> WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.</p>
+    <p>We do not warrant that:</p>
+    <ul>
+      <li>The App will be error-free or uninterrupted</li>
+      <li>Any defects will be corrected</li>
+      <li>The App will be compatible with all Android devices or future Android versions</li>
+      <li>The orbital or astronomical data is accurate for professional scientific use</li>
+    </ul>
+    <p>Some jurisdictions do not allow the exclusion of implied warranties, so the above exclusion may not apply to you.</p>
+
+    <h2 id="s10">10. Limitation of Liability</h2>
+    <p>TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THE DEVELOPER SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES — INCLUDING WITHOUT LIMITATION LOSS OF PROFITS, DATA, GOODWILL, SERVICE INTERRUPTION, OR DEVICE DAMAGE — ARISING OUT OF OR IN CONNECTION WITH YOUR USE OF THE APP, EVEN IF WE HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.</p>
+    <p>In no event shall our total liability to you exceed the amount you paid for the App (i.e., the one-time purchase price).</p>
+
+    <h2 id="s11">11. Privacy</h2>
+    <p>Your use of the App is also governed by our <a href="privacy.html">Privacy Policy</a>, which is incorporated into these Terms by reference. In brief: <strong>we collect no personal data</strong>. The App operates entirely on your device and makes no network requests.</p>
+
+    <h2 id="s12">12. Updates and Changes</h2>
+    <h3>App Updates</h3>
+    <p>We may release updates to the App from time to time to fix bugs, improve performance, or add features. Updates are distributed through Google Play. Your one-time purchase price includes all future updates. We are not obligated to release updates but will endeavour to maintain compatibility with current Android versions.</p>
+
+    <h3>Changes to These Terms</h3>
+    <p>We reserve the right to modify these Terms at any time. When we do, we will update the "Last updated" date at the top of this page. Continued use of the App after changes are posted constitutes your acceptance of the revised Terms. We encourage you to review this page periodically.</p>
+
+    <h2 id="s13">13. Termination</h2>
+    <p>Your licence to use the App will terminate automatically if you violate any provision of these Terms. Upon termination, you must cease all use of the App and delete all copies from your devices. Termination does not entitle you to a refund (except as provided under Section 4).</p>
+    <p>We reserve the right to terminate or suspend access to the App for any user who violates these Terms, at our sole discretion and without prior notice.</p>
+
+    <h2 id="s14">14. Governing Law</h2>
+    <p>These Terms shall be governed by and construed in accordance with applicable laws, without regard to conflict of law principles. Any disputes arising under these Terms shall be resolved through good-faith negotiation in the first instance. If resolution cannot be reached, disputes shall be subject to the jurisdiction of the courts in the Developer's jurisdiction.</p>
+    <p>If any provision of these Terms is found to be unenforceable, the remaining provisions will continue in full force and effect.</p>
+
+    <h2 id="s15">15. Contact Us</h2>
+    <p>If you have any questions about these Terms &amp; Conditions, or if you need support with the App, please contact us:</p>
+    <div class="contact-block">
+      <p><strong>Solar System Live Wallpaper — Support &amp; Legal</strong></p>
+      <p>Email: <a href="mailto:spreadlov.aid@gmail.com">spreadlov.aid@gmail.com</a></p>
+      <p style="margin-top:8px;font-size:.88rem;">We aim to respond to all inquiries within 1–3 business days.</p>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <p>© 2025 Solar System Live Wallpaper. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
